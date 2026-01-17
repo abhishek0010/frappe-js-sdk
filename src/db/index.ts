@@ -158,24 +158,18 @@ export class FrappeDB {
    * Gets count of documents from the database for a particular doctype with the given filters
    * @param {string} doctype Name of the doctype
    * @param {@type Filter[]} [filters] Filters to be applied in the count query
-   * @param {boolean} [cache] Whether to cache the result or not
    * @param {boolean} [debug] Whether to print debug messages or not
    * @returns Promise which resolves a number
    */
   async getCount<T = any>(
     doctype: string,
     filters?: Filter<T>[],
-    cache: boolean = false,
     debug: boolean = false,
   ): Promise<number> {
     const params: any = {
       doctype,
       filters: [],
     };
-
-    if (cache) {
-      params.cache = cache;
-    }
 
     if (debug) {
       params.debug = debug;
