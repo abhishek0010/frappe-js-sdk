@@ -4,8 +4,8 @@ TypeScript/JavaScript library for a [Frappe Framework](https://frappeframework.c
 
 <br />
 <p align="center">
-  <a href="https://github.com/nikkothari22/frappe-js-sdk"><img src="https://img.shields.io/maintenance/yes/2024?style=flat-square" /></a>
-  <a href="https://github.com/nikkothari22/frappe-js-sdk"><img src="https://img.shields.io/github/license/nikkothari22/frappe-js-sdk?style=flat-square" /></a>
+  <a href="https://github.com/The-Commit-Company/frappe-js-sdk"><img src="https://img.shields.io/maintenance/yes/2026?style=flat-square" /></a>
+  <a href="https://github.com/The-Commit-Company/frappe-js-sdk"><img src="https://img.shields.io/github/license/The-Commit-Company/frappe-js-sdk?style=flat-square" /></a>
   <a href="https://www.npmjs.com/package/frappe-js-sdk"><img src="https://img.shields.io/npm/v/frappe-js-sdk?style=flat-square" /></a>
     <a href="https://www.npmjs.com/package/frappe-js-sdk"><img src="https://img.shields.io/npm/dw/frappe-js-sdk?style=flat-square" /></a>
 </p>
@@ -179,10 +179,9 @@ Type declarations are available for the second argument in the source code.
 
 ```js
 const filters = [['creation', '>', '2021-10-09']];
-const useCache = true; /** Default is false - Optional **/
 const debug = false; /** Default is false - Optional **/
 
-db.getCount('DocType', filters, cache, debug)
+db.getCount('DocType', filters, debug)
   .then((count) => console.log(count))
   .catch((error) => console.error(error));
 ```
